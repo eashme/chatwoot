@@ -4,9 +4,17 @@ export default {
   title: 'Example/Button',
   component: MyButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    colorScheme: {
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary', 'success', 'alert', 'warning'],
+      },
+    },
     size: {
-      control: { type: 'select', options: ['small', 'medium', 'large'] },
+      control: {
+        type: 'select',
+        options: ['tiny', 'small', 'medium', 'large', 'expanded'],
+      },
     },
   },
 };
@@ -14,7 +22,8 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { MyButton },
-  template: '<my-button @onClick="onClick" v-bind="$props" />',
+  template:
+    '<my-button @onClick="onClick" v-bind="$props" >New message</woot-button>',
 });
 
 export const Primary = Template.bind({});

@@ -98,7 +98,7 @@
     "prettier": "^1.16.4",
     "rimraf": "^3.0.0",
     "sass": "^1.32.11",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "^10",
     "style-loader": "^2.0.0",
     "vue-jest": "^3.0.5",
     "webpack-dev-server": "^3.11.0"
